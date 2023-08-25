@@ -73,7 +73,7 @@ To Do List: Add & Remove. In this project, i will implement the CRUD (create, re
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-### URL: https://maximoortelli.github.io/Awesome-BookES6/ 
+### URL: https://maximoortelli.github.io/To-Do-list-/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
