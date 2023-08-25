@@ -57,14 +57,14 @@ export const allmylist = () => {
       const li = document.createElement('li');
       li.classList.add('li');
       li.setAttribute('id', `descp${x}`);
+      li.setAttribute('contentEditable', 'true');
 
       li.textContent = myList[x].description;
-      li.addEventListener('click', () => {
-        // eslint-disable-next-line no-alert
-        const descrip = prompt(`Enter a new description: ${x}`);
+      li.addEventListener('input', () => {
+        const newDescription = li.textContent.trim();
 
-        if (descrip !== null && descrip !== '') {
-          myList[x].description = descrip;
+        if (newDescription !== '') {
+          myList[x].description = newDescription;
 
           allmylist();
 
