@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  padding: 5%;
+  font-size: 2rem;
+  color: rgb(92, 90, 90);
+  font-family: 'Lato', sans-serif;
+}
+
+#group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 0;
+}
+
+#allitems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.groupdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 94%;
+  padding: 3%;
+  margin-left: 0;
+  border-bottom: solid rgb(222, 218, 218) 1px;
+}
+
+.ul {
+  width: 100%;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.li {
+  margin-left: 0;
+}
+
+.title {
+  padding: 3%;
+  width: 94%;
+  border: solid rgb(222, 218, 218) 1px;
+  color: rgb(92, 90, 90);
+  font-size: 2rem;
+  border-bottom: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clear {
+  width: 94%;
+  padding: 3%;
+  margin: 0;
+  background-color: rgb(207, 202, 202);
+  color: rgb(116, 112, 112);
+  text-align: center;
+}
+
+.add {
+  width: 100%;
+  margin: 0;
+}
+
+.add > .input {
+  width: 94%;
+  padding: 3%;
+  border: solid rgb(222, 218, 218) 1px;
+  font-size: 2rem;
+  background-image: url('./assets/push.png');
+  background-repeat: no-repeat;
+  background-position: 97%;
+}
+
+.div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5%;
+  width: 20%;
+}
+
+.threepoints {
+  cursor: pointer;
+}
+
+.trash {
+  cursor: pointer;
+  width: 3%;
+}
+
+#picture {
+  width: 22px;
+  height: 22px;
+  background-image: url('./assets/sync.png');
+  display: inline-block;
+  margin-right: 0;
+}
