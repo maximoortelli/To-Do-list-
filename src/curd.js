@@ -1,5 +1,6 @@
 import trashimage from './assets/trash.png';
 import threepoints from './assets/threepoints.png';
+import { updateStatus } from './status.js';
 
 export const myList = [];
 
@@ -21,6 +22,7 @@ export const deleteConfig = (myOptions, groupDiv, x) => {
     const trash = document.createElement('img');
     trash.src = trashimage;
     trash.classList.add('trash');
+
     groupDiv.appendChild(trash);
 
     trash.addEventListener('click', () => {
@@ -44,45 +46,49 @@ export const allmylist = () => {
   ul.classList.add('ul');
 
   for (let x = 0; x < myList.length; x += 1) {
-    if (myList[x].completed === false) {
-      const groupDiv = document.createElement('div');
-      groupDiv.classList.add('groupdiv');
-      groupDiv.setAttribute('id', `id${x}`);
-      const div = document.createElement('div');
-      div.classList.add('div');
-      const box = document.createElement('input');
-      box.setAttribute('type', 'checkbox');
-      box.setAttribute('id', `chk${x}`);
+    const groupDiv = document.createElement('div');
+    groupDiv.classList.add('groupdiv');
+    groupDiv.setAttribute('id', `id${x}`);
+    const div = document.createElement('div');
+    div.classList.add('div');
+    const box = document.createElement('input');
+    box.classList.add('box');
+    box.setAttribute('type', 'checkbox');
+    box.setAttribute('data-index', x);
+    box.setAttribute('id', `chk${x}`);
+    box.addEventListener('change', (event) => {
+      const newData = event.target.getAttribute('data-index');
+      updateStatus(myList, savemyStorage, newData);
+    });
 
-      const li = document.createElement('li');
-      li.classList.add('li');
-      li.setAttribute('id', `descp${x}`);
-      li.setAttribute('contentEditable', 'true');
+    const li = document.createElement('li');
+    li.classList.add('li');
+    li.setAttribute('id', `descp${x}`);
+    li.setAttribute('contentEditable', 'true');
 
-      li.textContent = myList[x].description;
-      li.addEventListener('input', () => {
-        const newDescription = li.textContent.trim();
+    li.textContent = myList[x].description;
+    li.addEventListener('input', () => {
+      const newDescription = li.textContent.trim();
 
-        if (newDescription !== '') {
-          myList[x].description = newDescription;
+      if (newDescription !== '') {
+        myList[x].description = newDescription;
 
-          allmylist();
+        allmylist();
 
-          savemyStorage();
-        }
-      });
+        savemyStorage();
+      }
+    });
 
-      const config = document.createElement('img');
-      config.classList.add('threepoints');
-      config.src = threepoints;
-      deleteConfig(config, groupDiv, x);
+    const config = document.createElement('img');
+    config.classList.add('threepoints');
+    config.src = threepoints;
+    deleteConfig(config, groupDiv, x);
 
-      div.appendChild(box);
-      div.appendChild(li);
-      groupDiv.appendChild(div);
-      groupDiv.appendChild(config);
-      ul.appendChild(groupDiv);
-    }
+    div.appendChild(box);
+    div.appendChild(li);
+    groupDiv.appendChild(div);
+    groupDiv.appendChild(config);
+    ul.appendChild(groupDiv);
   }
   father.appendChild(ul);
 };

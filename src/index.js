@@ -1,5 +1,4 @@
 import './style.css';
-
 import {
   myList,
   allmylist,
@@ -7,10 +6,18 @@ import {
   retrieveLocalStorage,
 } from './curd.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const storedTodoList = retrieveLocalStorage();
-  myList.push(...storedTodoList);
+import { clear } from './status.js';
 
+document.addEventListener('DOMContentLoaded', () => {
   inputFunction();
+
+  const mystorage = retrieveLocalStorage();
+  myList.push(...mystorage);
+
+  const Button = document.querySelector('.clear');
+  Button.addEventListener('click', (e) => {
+    e.preventDefault();
+    clear(myList);
+  });
+  allmylist();
 });
-document.addEventListener('DOMContentLoaded', allmylist);
