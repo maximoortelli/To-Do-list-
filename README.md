@@ -4,7 +4,7 @@
   <img src="cat-black-face.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>To Do List: Add & Remove</b></h3>
+  <h3><b>To Do List: Interactive List</b></h3>
 
 </div>
 
@@ -33,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To Do List: Add & Remove <a name="about-project"></a>
+# 📖 To Do List: Interactive List <a name="about-project"></a>
 
-To Do List: Add & Remove. In this project, i will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and my application will be completed. The goal here is to master all of the tools and best practices learned about in previous steps to use them in all Microverse projects and most likely in my future job as well.
+To Do List: Interactive List. In this project, iwill add some functionality to my application to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage. The goal here is to master all of the tools and best practices learned about in previous steps to use them in all Microverse projects and most likely in my future job as well.
 
 ## 🛠 Built With <a name="built-with"></a>
 
