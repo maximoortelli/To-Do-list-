@@ -16,6 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    -  [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -65,6 +66,14 @@ To Do List: Interactive List. In this project, iwill add some functionality to m
 - **Use of linters**
 - **Showcase of branching and pull request**
 - **Example of profesional best practices**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+### URL: https://maximoortelli.github.io/To-Do-list-/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
